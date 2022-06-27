@@ -13,7 +13,7 @@ class ChampionshipSubscribeController {
             const { value: subscriptionData, error } = SubscriptionValidator.validate(req.body);
             if (error) throw new Error(error);
 
-            res.status(200).json(
+            res.status(201).json(
                 await this.championshipSubscribeUseCase.execute(subscriptionData)
             );
         }
