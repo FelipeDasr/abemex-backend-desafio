@@ -8,3 +8,8 @@ export interface ITeamRecordDTO extends ITeamDTO {
     createdAt: Date;
     deletedAt: Date | null;
 };
+
+export interface ITeamAssociationRecordDTO {
+    teamId: string;
+    Team: ITeamRecordDTO;
+}

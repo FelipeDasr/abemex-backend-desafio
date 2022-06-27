@@ -1,4 +1,4 @@
-import { ITeamRecordDTO } from "./TeamDTOs";
+import { ITeamAssociationRecordDTO, ITeamRecordDTO } from "./TeamDTOs";
 import { IMatchDTO } from "./MatchDTOs";
 
 export interface IChampionshipDTO {
@@ -17,10 +17,7 @@ export interface IChampionshipRecordDTO extends IChampionshipDTO {
 
 export interface IChampionshipHistoryRecordDTO extends IChampionshipRecordDTO {
     Matches: Omit<IMatchDTO, 'championshipId'>[];
-    Championshipteams: {
-        teamId: string;
-        Team: ITeamRecordDTO;
-    }[];
+    Championshipteams: ITeamAssociationRecordDTO[];
 }
 
 export interface IChampionshipSubscribeDTO {
