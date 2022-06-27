@@ -26,6 +26,7 @@ O comando abaixo irá rodar a aplicação, em modo desenvolvedor.
     npm start
 ---
 # Rotas
+[Arquivos de rotas (Insomnia)](./abmex-desafio-routes-file-insominia.json)
 ### Criar campeonato
 
 | Rota                | Método     |
