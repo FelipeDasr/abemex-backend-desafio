@@ -21,7 +21,7 @@ export const championshipHistorySerialized = (
 }
 
 export const teamAssociationSerialized = (
-    teams: ITeamAssociationRecordDTO[]
+    teams: ITeamAssociationRecordDTO[] | Omit<ITeamAssociationRecordDTO, 'teamId'>[]
 ) => {
     return teams.map(t => ({ ...t.Team }))
 }
