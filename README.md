@@ -21,6 +21,11 @@ Desfazer a migration:
     npx sequelize-cli db:migrate:undo:all
 
 ### Iniciando a aplicação 
+
+Instalar todas as dependências do projeto:
+
+    npm install
+
 O comando abaixo irá rodar a aplicação, em modo desenvolvedor.
 
     npm start
