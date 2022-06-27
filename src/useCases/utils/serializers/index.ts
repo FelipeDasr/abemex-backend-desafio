@@ -1,6 +1,6 @@
 import { IChampionshipHistoryRecordDTO } from "../../../dto/ChampionshipDTOs";
-import { IMatchDTO } from "../../../dto/MatchDTOs";
-import { ChampionshipTeam } from "../../../models/ChampionshipTeam";
+import { IMatchDTO } from "../../../dto/MatchDTOs"
+import { ITeamAssociationRecordDTO } from "../../../dto/TeamDTOs";
 
 export const championshipHistorySerialized = (
     chpHistory: IChampionshipHistoryRecordDTO
@@ -16,8 +16,14 @@ export const championshipHistorySerialized = (
         closed: chpHistory.closed,
         createdAt: chpHistory.createdAt,
         matches: matchesSerialized(chpHistory.Matches),
-        teams: chpHistory.Championshipteams.map(t => ({ ...t.Team }))
+        teams: teamAssociationSerialized(chpHistory.Championshipteams)
     };
+}
+
+export const teamAssociationSerialized = (
+    teams: ITeamAssociationRecordDTO[]
+) => {
+    return teams.map(t => ({ ...t.Team }))
 }
 
 const matchesSerialized = (matches: Omit<IMatchDTO, 'championshipId'>[]) => {
