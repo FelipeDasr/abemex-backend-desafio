@@ -127,7 +127,7 @@ class ChampionshipRepository {
         if (!championshipUpdated[0]) throw new Error("The team does not exist");
 
         return {
-            message: "Team successfully updated"
+            message: "Championship successfully updated"
         };
     }
 
