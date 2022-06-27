@@ -54,6 +54,7 @@ class TeamRepository {
                 attributes: [],
                 include: [{
                     association: 'Team',
+                    paranoid: false
                 }],
             },
                 searchQuery.page,
